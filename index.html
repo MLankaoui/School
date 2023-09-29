@@ -29,7 +29,7 @@
             </div>
             <div class="content">
               <a href="PHP/teacher.html">
-              <h2>الفضاء الخاص بمعلمات ومعلمون التلاميذ</h2>
+              <h2 id="Profs" onmouseover="changeToFrench2()">الفضاء الخاص بمعلمات ومعلمون التلاميذ</h2>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@
           </div>
           <div class="content">
               <a href="PHP/student.php">
-              <h2>الفضاء الخاص بالتلميذات والتلاميذ</h2>
+              <h2 id="etudiants" onmouseover="changeToFrench()">الفضاء الخاص بالتلميذات والتلاميذ</h2>
             </div>
         </div>
       </div>
@@ -55,8 +55,20 @@
       <p><i><a href="https://github.com/oulaydi" target="_blank">OUALDYI</a></i> &copy; 2023 .جميع الحقوق محفوظة</p>
     </footer>    
     <!-- footer ends -->
+
+
     
     <!-- js -->
     <script src="JS/app.js"></script>
+    <script>
+      function changeToFrench()
+      {
+        document.getElementById("etudiants").innerHTML = "Espace étudiants.";
+      }
+      function changeToFrench2()
+      {
+        document.getElementById("Profs").innerHTML = "Espace Profs.";
+      }  
+      </script>
   </body>
 </html>
