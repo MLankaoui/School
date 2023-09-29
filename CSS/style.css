@@ -1,0 +1,241 @@
+@import url(https://fonts.googleapis.com/earlyaccess/scheherazade.css);
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+::selection{
+    background-color: var(--button-color);
+    color: var(--background-color);
+}
+
+/* Colors */
+/* 
+    Primary Color (Official School Color): #0072CE (Blue)
+    Secondary Color (Accent): #FFA300 (Orange)
+    Background Color: #eeefef (Dark White)
+    Text Color: #333333 (Dark Gray)
+    Button Color: #4CAF50 (Green)
+*/
+:root {
+    --primary-color: #0072CE;
+    --secondary-oclor: #FFA300;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --button-color: #4CAF50;
+
+    /* Font family Arabic */
+    --font-family: 'Scheherazade';
+}
+
+.bg {
+    position: absolute;
+    height: 510px;
+    margin-right: 800px;
+    margin-top: 161px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+.bg2 {
+    position: absolute;
+    transform: rotate(-90deg);
+    height: 114px;
+    left: 1220px;
+    bottom: 491px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+div {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+/* containers */
+
+.main {
+    margin: 0 10cm;
+    margin-top: 1.5cm;
+}
+
+.container {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    margin-left: 1.2cm;
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    height: 370px;
+    width: 300px;
+    transition: .3s;
+}
+
+.card:hover {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .7);
+}
+
+.card .teacher-div,
+.student-div {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 100%;   
+}
+
+.card img {
+    margin-bottom: 90px;
+    width: 250px;
+    border: 4px solid var(--secondary-oclor);
+    border-radius: 50%;
+    transition: .5s;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+.card .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: var(--font-family);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--button-color);
+}
+
+a {
+    color: var(--text-color);
+}
+
+/* footer */
+footer {
+    color: var(--text-color); 
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 20px;
+    margin-top: 60px;
+    font-family: var(--font-family);
+    font-weight: bold;
+  }
+  
+
+  /* Media */
+
+@media (max-width: 767px) {
+    .bg {
+        display: none;
+    }
+    
+    .bg2 {
+        display: none;
+    }
+    
+    .main {
+        margin: 0 2rem; /* Adjust margins for smaller screens */
+        margin-top: 1rem;
+        display: contents;
+    }
+    
+    .container {
+        width: 100%; /* Make the container full width */
+        flex-direction: column; /* Stack cards vertically */
+        margin-top: 45px;
+        margin-bottom: -70px;
+    }
+    
+    .card {
+        margin-left: 0; /* Reset the left margin */
+        margin-bottom: 2rem; /* Add space between cards */
+        width: 100%; /* Make cards full width */
+        height: 230px;
+    }
+    
+    .card img {
+        width: 140px;
+        margin-top: 12px;
+    }
+
+    h2{
+        font-size: 21px;
+        margin-top: 30px;
+    }
+
+    footer p {
+        font-size: 15px;
+        margin-top: 70px;
+      }
+}
+
+@media (min-width: 992px) {
+    
+    .bg {
+        margin-right: 800px;
+        margin-top: 161px;
+    }
+    
+    .bg2 {
+        display: block;
+    }
+    
+    .main {
+        margin: 0 10cm;
+        margin-top: 1.5cm;
+    }
+    
+    .container {
+        width: 1000px;
+        flex-direction: row;
+    }
+    
+    .card {
+        margin-left: 1.2cm;
+        margin-bottom: 0;
+        width: 300px;
+    }
+    
+    .card img {
+        width: 250px;
+    }
+}
